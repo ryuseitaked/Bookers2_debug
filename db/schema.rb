@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2020_08_30_062142) do
 
   create_table "books", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
+    t.string "title", default: "", null: false
+    t.text "body", default: "", null: false
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 2020_08_30_062142) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "name"
-    t.text "introduction"
+    t.string "name", default: "", null: false
+    t.text "introduction", default: "", null: false
     t.string "profile_image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
